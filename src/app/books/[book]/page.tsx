@@ -1,12 +1,12 @@
 import React from 'react'
 
-type BookParams = {
-  params: {
-    book: string; // Use `string` to properly type the dynamic route parameter
-  };
-};
-const Book = async ({params}: BookParams) => {
-    const url = await fetch(`https://simple-books-api.glitch.me/books/${params.book}`);
+// type BookParams = {
+//   params: {
+//     book: string; // Use `string` to properly type the dynamic route parameter
+//   };
+// };
+const Book = async (props: any) => {
+    const url = await fetch(`https://simple-books-api.glitch.me/books/${props.book}`);
     const response = await url.json();
     console.log(response);
     // console.log(params)
