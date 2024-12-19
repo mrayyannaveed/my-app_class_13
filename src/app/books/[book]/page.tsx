@@ -6,7 +6,7 @@ import React from 'react'
 //   };
 // };
 const Book = async (props: any) => {
-    const url = await fetch(`https://simple-books-api.glitch.me/books/${props.book}`);
+    const url = await fetch(`https://simple-books-api.glitch.me/books/${props.params.book}`);
     const response = await url.json();
     console.log(response);
     // console.log(params)
